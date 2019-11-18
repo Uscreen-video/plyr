@@ -9967,7 +9967,9 @@ function () {
       } else if (!Fullscreen.native || this.forceFallback) {
         toggleFallback.call(this, true);
       } else if (!this.prefix) {
-        this.target.requestFullscreen();
+        this.target.requestFullscreen({
+          navigationUI: "hide"
+        });
       } else if (!is$1.empty(this.prefix)) {
         this.target["".concat(this.prefix, "Request").concat(this.property)]();
       }
