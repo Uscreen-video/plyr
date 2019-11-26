@@ -134,7 +134,7 @@ const captions = {
 
                     // Turn off native caption rendering to avoid double captions
                     // eslint-disable-next-line no-param-reassign
-                    if (!browser.isIos && this.player.config.fullscreen.iosNative) {
+                    if (!browser.isIos && !this.player.config.fullscreen.iosNative) {
                         track.mode = 'hidden';
                     }
 

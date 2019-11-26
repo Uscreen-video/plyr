@@ -9176,7 +9176,7 @@ typeof navigator === "object" && (function (Raven, Shr) {
 	        }); // Turn off native caption rendering to avoid double captions
 	        // eslint-disable-next-line no-param-reassign
 
-	        if (!browser.isIos && _this.player.config.fullscreen.iosNative) {
+	        if (!browser.isIos && !_this.player.config.fullscreen.iosNative) {
 	          track.mode = 'hidden';
 	        } // Add event listener for cue changes
 
