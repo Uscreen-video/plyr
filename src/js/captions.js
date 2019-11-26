@@ -134,7 +134,9 @@ const captions = {
 
                     // Turn off native caption rendering to avoid double captions
                     // eslint-disable-next-line no-param-reassign
-                    track.mode = 'hidden';
+                    if (!browser.isIos && this.player.config.fullscreen.iosNative) {
+                        track.mode = 'hidden';
+                    }
 
                     // Add event listener for cue changes
                     on.call(this, track, 'cuechange', () => captions.updateCues.call(this));
